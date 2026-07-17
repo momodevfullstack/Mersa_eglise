@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ArrowRight, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -18,7 +19,7 @@ export default function Footer() {
             </p>
           </div>
           
-          <div className="md:col-span-3 md:col-start-7">
+          <div className="md:col-span-2 md:col-start-6">
             <h3 className="text-xs uppercase tracking-[0.2em] font-medium text-stone-500 mb-6">Menu</h3>
             <ul className="space-y-4">
               <li><Link to="/" className="text-stone-300 hover:text-white transition-colors">Accueil</Link></li>
@@ -28,7 +29,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <h3 className="text-xs uppercase tracking-[0.2em] font-medium text-stone-500 mb-6">Culte</h3>
             <ul className="space-y-4">
               <li className="text-stone-300">Dimanche — 10h00</li>
@@ -36,6 +37,30 @@ export default function Footer() {
               <li className="pt-4 text-stone-300">Mardi — 19h00</li>
               <li className="text-stone-500 font-light text-sm">Groupes de maison</li>
             </ul>
+          </div>
+
+          <div className="md:col-span-4 md:col-start-9">
+            <h3 className="text-xs uppercase tracking-[0.2em] font-medium text-stone-500 mb-6">Newsletter</h3>
+            <p className="text-stone-400 font-light text-sm leading-relaxed mb-6">
+              Inscrivez-vous pour recevoir les actualités de la semaine, les événements et nos enseignements par email.
+            </p>
+            <form className="flex flex-col gap-3" onSubmit={(e) => e.preventDefault()}>
+              <div className="relative">
+                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-500" />
+                <input 
+                  type="email" 
+                  placeholder="Votre adresse email" 
+                  className="w-full bg-stone-800 border border-stone-700 rounded-full pl-11 pr-4 py-3 text-sm text-white focus:outline-none focus:border-stone-500 transition-colors placeholder:text-stone-500"
+                  required
+                />
+              </div>
+              <button 
+                type="submit"
+                className="w-full bg-white text-stone-900 hover:bg-stone-100 px-6 py-3 rounded-full text-sm font-medium transition-colors flex items-center justify-center gap-2"
+              >
+                S'inscrire <ArrowRight className="w-4 h-4" />
+              </button>
+            </form>
           </div>
 
         </div>
