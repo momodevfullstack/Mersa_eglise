@@ -1,0 +1,6 @@
+{
+  "name": "Portail Église",
+  "description": "Plateforme web pour une église avec portail public et espace d'administration sécurisé.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
